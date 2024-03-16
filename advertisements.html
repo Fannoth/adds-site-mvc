@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advertisement Service - Advertisements</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- Dołączenie arkusza stylów CSS -->
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="page-title">Advertisement Service</h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="advertisements.html">Advertisements</a></li>
+          <li><a href="addAdvertisement.html">Add Advertisement</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="ads-section" class="ads-section">
+        <h2 class="section-title">Advertisements</h2>
+        <div class="ad-list" id="ad-list"></div>
+      </section>
+    </main>
+    <script src="Model.js"></script>
+    <script src="View.js"></script>
+    <script src="Controller.js"></script>
+    <script>
+      view.displayAds(model.getAllAds());
+    </script>
+  </body>
+</html>

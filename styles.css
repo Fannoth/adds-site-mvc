@@ -1,0 +1,153 @@
+/* Resetowanie stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stylizacja nagłówka */
+.header {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Stylizacja nawigacji */
+.navigation ul {
+  list-style-type: none;
+}
+
+.navigation ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+  color: #ff7b00; /* Kolor podświetlenia przy najechaniu myszką */
+}
+
+/* Stylizacja sekcji powitalnej */
+.welcome-section {
+  background-image: linear-gradient(to bottom right, #ff7b00, #ff3300);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.welcome-section p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Stylizacja sekcji dodawania ogłoszenia */
+.add-ad-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.ad-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ad-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ad-textarea {
+  height: 100px;
+}
+
+.ad-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.ad-button:hover {
+  background-color: #0056b3;
+}
+
+/* Stylizacja sekcji z ogłoszeniami */
+.ads-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.ad-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Stylizacja pojedynczego ogłoszenia */
+.ad {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ad h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.ad p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.ad button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.ad button:hover {
+  background-color: #0056b3;
+}

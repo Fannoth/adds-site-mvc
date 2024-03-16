@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advertisement Service - Add Advertisement</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Dołączenie arkusza stylów CSS -->
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="page-title">Advertisement Service</h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="advertisements.html">Advertisements</a></li>
+          <li><a href="addAdvertisement.html">Add Advertisement</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="add-ad-section" class="add-ad-section">
+        <h2 class="section-title">Add Advertisement</h2>
+        <form id="ad-form" class="ad-form">
+          <input type="text" id="title" class="ad-input" placeholder="Title" />
+          <textarea
+            id="description"
+            class="ad-input ad-textarea"
+            placeholder="Description"
+          ></textarea>
+          <input
+            type="number"
+            id="price"
+            class="ad-input"
+            placeholder="Price"
+          />
+          <input type="file" id="image" class="ad-input" accept="image/*" />
+          <button type="submit" class="ad-button">Add Ad</button>
+        </form>
+      </section>
+    </main>
+    <script src="Model.js"></script>
+    <script src="View.js"></script>
+    <script src="Controller.js"></script>
+    <script>
+      document
+        .getElementById("ad-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const title = document.getElementById("title").value;
+          const description = document.getElementById("description").value;
+          const price = document.getElementById("price").value;
+          const image = document.getElementById("image").files[0]; // Pobierz pierwsze zdjęcie z wybranego pliku
+          controller.addAd(title, description, price, image);
+        });
+    </script>
+  </body>
+</html>
