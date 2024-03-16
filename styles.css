@@ -192,12 +192,100 @@
   border-radius: 4px;
 }
 
+.select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.selects {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 .select {
-  width: 30%;
+  width: 45%; /* Dostosuj do swoich potrzeb */
   padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-left: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.year-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.year-filters label {
+  margin-right: 10px;
+}
+
+.year-filters input[type="range"] {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.year-filters span {
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-controls-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#toggle-controls {
+  padding: 10px 20px;
   font-size: 16px;
-  margin-bottom: 20px;
+  color: white;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#toggle-controls:hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+#toggle-controls:active {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+.delete-button {
+  margin-top: 15px;
+  margin-left: 51%;
+}
+
+.cancel-button {
+  margin-left: 43%;
 }

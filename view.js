@@ -9,112 +9,136 @@ class AdsView {
     successMessage.style.display = "block";
   }
 
-  createEditButton(adIndex) {
+  createEditButton(id) {
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
-    editButton.setAttribute("id", `edit-${adIndex}`);
+    editButton.setAttribute("id", `edit-${id}`);
     editButton.addEventListener("click", () => {
-      const ad = this.model.getAd(adIndex);
-      this.fillFormForEditing(ad, adIndex);
+      const ad = this.model.getAd(id);
+      this.fillFormForEditing(ad);
     });
     return editButton;
   }
 
-  createDeleteButton(adIndex) {
+  createDeleteButton(id) {
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    deleteButton.setAttribute("id", `delete-${adIndex}`);
+    deleteButton.setAttribute("id", `delete-${id}`);
+    deleteButton.classList.add("delete-button");
     deleteButton.addEventListener("click", () => {
-      this.model.deleteAd(adIndex);
+      this.model.deleteAd(id);
       this.displayAds(this.model.ads);
     });
     return deleteButton;
   }
 
-  fillFormForEditing(ad, adIndex) {
-    const titleElement = document.getElementById(`title-${adIndex}`);
-    const descriptionElement = document.getElementById(
-      `description-${adIndex}`
-    );
-    const priceElement = document.getElementById(`price-${adIndex}`);
-    const imageElement = document.getElementById(`image-${adIndex}`);
-    const categoryElement = document.getElementById(`category-${adIndex}`);
+  fillFormForEditing(ad) {
+    const {id, title, description, price, image, category, release} = ad;
+    const titleElement = document.getElementById(`title-${id}`);
+    const descriptionElement = document.getElementById(`description-${id}`);
+    const priceElement = document.getElementById(`price-${id}`);
+    const imageElement = document.getElementById(`image-${id}`);
+    const categoryElement = document.getElementById(`category-${id}`);
+    const releaseElement = document.getElementById(`release-${id}`);
 
-    titleElement.outerHTML = `<input type="text" id="title-${adIndex}" class="ad-input" value="${ad.title}">`;
-    descriptionElement.outerHTML = `<input type="text" id="description-${adIndex}"  class="ad-input ad-textarea" value="${ad.description}">`;
-    priceElement.outerHTML = `<input type="number" id="price-${adIndex}" class="ad-input" value="${ad.price}">`;
-    categoryElement.outerHTML = `<input type="text" id="category-${adIndex}" class="ad-input" value="${ad.category}">`;
-    imageElement.outerHTML = `<input type="text" id="image-${adIndex}" class="ad-input" value="${
-      ad.image || ""
+    titleElement.outerHTML = `<input type="text" id="title-${id}" class="ad-input" value="${title}">`;
+    descriptionElement.outerHTML = `<input type="text" id="description-${id}"  class="ad-input ad-textarea" value="${description}">`;
+    priceElement.outerHTML = `<input type="number" id="price-${id}" class="ad-input" value="${price}">`;
+    categoryElement.outerHTML = `
+<select id="category-${id}" class="ad-input">
+  <option value="Drug" ${category === "Drug" ? "selected" : ""}>Drug</option>
+  <option value="Phone" ${category === "Phone" ? "selected" : ""}>Phone</option>
+  <option value="Car" ${category === "Car" ? "selected" : ""}>Car</option>
+  <option value="Animal" ${
+    category === "Animal" ? "selected" : ""
+  }>Animal</option>
+</select>`;
+    releaseElement.outerHTML = `<input type="number" id="release-${id}" class="ad-input" value="${release}">`;
+
+    imageElement.outerHTML = `<input type="text" id="image-${id}" class="ad-input" value="${
+      image || ""
     }">`;
 
-    const editButton = document.getElementById(`edit-${adIndex}`);
-    const deleteButton = document.getElementById(`delete-${adIndex}`);
+    const editButton = document.getElementById(`edit-${id}`);
+    const deleteButton = document.getElementById(`delete-${id}`);
     editButton.remove();
     deleteButton.remove();
 
     const acceptButton = document.createElement("button");
     acceptButton.textContent = "Accept";
     acceptButton.addEventListener("click", () => {
-      const title = document.getElementById(`title-${adIndex}`).value;
-      const description = document.getElementById(
-        `description-${adIndex}`
-      ).value;
-      const price = document.getElementById(`price-${adIndex}`).value;
-      const imageURL = document.getElementById(`image-${adIndex}`).value;
-      this.model.editAd(adIndex, title, description, price, imageURL);
+      const title = document.getElementById(`title-${id}`).value;
+      const description = document.getElementById(`description-${id}`).value;
+      const price = document.getElementById(`price-${id}`).value;
+      const imageURL = document.getElementById(`image-${id}`).value;
+      const category = document.getElementById(`category-${id}`).value;
+      const release = document.getElementById(`release-${id}`).value;
+      this.model.editAd(
+        id,
+        title,
+        description,
+        price,
+        imageURL,
+        category,
+        release
+      );
       this.displayAds(this.model.ads);
     });
     const cancelButton = document.createElement("button");
     cancelButton.textContent = "Cancel";
+    cancelButton.classList.add("cancel-button");
     cancelButton.addEventListener("click", () => {
       this.displayAds(this.model.ads);
     });
 
-    const adElement = document.getElementById(`ad-${adIndex}`);
+    const adElement = document.getElementById(`ad-${id}`);
     adElement.appendChild(acceptButton);
     adElement.appendChild(cancelButton);
   }
 
   displayAds(ads) {
     this.adList.innerHTML = "";
-    ads.forEach((ad, index) => {
+    ads.forEach((ad) => {
+      const {id, title, description, price, category, image, release} = ad;
       const adElement = document.createElement("div");
-      adElement.setAttribute("id", `ad-${index}`);
+      adElement.setAttribute("id", `ad-${id}`);
       adElement.classList.add("ad");
 
       const titleElement = document.createElement("h3");
-      titleElement.textContent = ad.title;
-      titleElement.setAttribute("id", `title-${index}`);
+      titleElement.textContent = title;
+      titleElement.setAttribute("id", `title-${id}`);
       adElement.appendChild(titleElement);
 
       const descriptionElement = document.createElement("p");
-      descriptionElement.textContent = ad.description;
-      descriptionElement.setAttribute("id", `description-${index}`);
+      descriptionElement.textContent = description;
+      descriptionElement.setAttribute("id", `description-${id}`);
       adElement.appendChild(descriptionElement);
 
       const priceElement = document.createElement("p");
-      priceElement.textContent = `Price: ${ad.price}`;
-      priceElement.setAttribute("id", `price-${index}`);
+      priceElement.textContent = `Price: ${price}`;
+      priceElement.setAttribute("id", `price-${id}`);
       adElement.appendChild(priceElement);
 
       const categoryElement = document.createElement("p");
-      categoryElement.textContent = `Category: ${ad.category}`;
-      categoryElement.setAttribute("id", `category-${index}`);
+      categoryElement.textContent = `Category: ${category}`;
+      categoryElement.setAttribute("id", `category-${id}`);
       adElement.appendChild(categoryElement);
 
-      if (ad.image) {
-        const imageElement = document.createElement("img");
-        imageElement.src = ad.image;
-        imageElement.alt = "Ad Image";
-        imageElement.setAttribute("id", `image-${index}`);
-        adElement.appendChild(imageElement);
-      }
+      const releaseElement = document.createElement("p");
+      releaseElement.textContent = `Release: ${release}`;
+      releaseElement.setAttribute("id", `release-${id}`);
+      adElement.appendChild(releaseElement);
 
-      const editButton = this.createEditButton(index);
+      const imageElement = document.createElement("img");
+      imageElement.src = image;
+      imageElement.alt = "Ad Image";
+      imageElement.setAttribute("id", `image-${id}`);
+      adElement.appendChild(imageElement);
+
+      const editButton = this.createEditButton(id);
       adElement.appendChild(editButton);
 
-      const deleteButton = this.createDeleteButton(index);
+      const deleteButton = this.createDeleteButton(id);
       adElement.appendChild(deleteButton);
 
       this.adList.appendChild(adElement);
@@ -126,6 +150,7 @@ class AdsView {
     document.getElementById("description").value = "";
     document.getElementById("price").value = "";
     document.getElementById("imageURL").value = "";
+    document.getElementById("category").value = "";
   }
 }
 

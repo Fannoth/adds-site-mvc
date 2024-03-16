@@ -34,8 +34,10 @@
             placeholder="Price"
           />
           <select id="category" class="ad-input" placeholder="Category">
-            <option value="Lost">Lost</option>
-            <option value="Found">Found</option>
+            <option value="Drug">Drug</option>
+            <option value="Phone">Phone</option>
+            <option value="Car">Car</option>
+            <option value="Animal">Animal</option>
           </select>
           <input
             type="url"
@@ -67,8 +69,9 @@
           const title = document.getElementById("title").value;
           const description = document.getElementById("description").value;
           const price = document.getElementById("price").value;
-          const imageURL = document.getElementById("imageURL").value; // Pobierz link do obrazu
-          controller.addAd(title, description, price, imageURL); // Przekazanie linku do obrazu do metody addAd
+          const imageURL = document.getElementById("imageURL").value;
+          const category = document.getElementById("category").value;
+          controller.addAd(title, description, price, imageURL, category); // Przekazanie linku do obrazu do metody addAd
         });
 
       function redirectToAdvertisements() {

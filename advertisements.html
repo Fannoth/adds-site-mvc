@@ -18,24 +18,55 @@
       </nav>
     </header>
     <main>
-      <div class="filters">
-        <input type="text" id="title-filter" placeholder="Filter by title" />
-        <input type="number" id="min-price-filter" placeholder="Min price" />
-        <input type="number" id="max-price-filter" placeholder="Max price" />
+      <div class="show-controls-wrapper">
+        <button id="toggle-controls">Show controls</button>
       </div>
+      <div id="controls" class="hidden">
+        <div class="filters">
+          <input type="text" id="title-filter" placeholder="Filter by title" />
+          <input type="number" id="min-price-filter" placeholder="Min price" />
+          <input type="number" id="max-price-filter" placeholder="Max price" />
+        </div>
 
-      <select id="sort-select" class="select">
-        <option value="">Sort by...</option>
-        <option value="title-A-Z">Title A-Z</option>
-        <option value="title-Z-A">Title Z-A</option>
-        <option value="lowest-price">Lowest price</option>
-        <option value="highest-price">Highest price</option>
-      </select>
-      <select id="category-select" class="select">
-        <option value="">Filter by category...</option>
-        <option value="Lost">Lost</option>
-        <option value="Found">Found</option>
-      </select>
+        <div class="selects">
+          <select id="sort-select" class="select">
+            <option value="">Sort by...</option>
+            <option value="title-A-Z">Title A-Z</option>
+            <option value="title-Z-A">Title Z-A</option>
+            <option value="lowest-price">Lowest price</option>
+            <option value="highest-price">Highest price</option>
+          </select>
+          <select id="category-select" class="select">
+            <option value="">Filter by category...</option>
+            <option value="Drug">Drug</option>
+            <option value="Phone">Phone</option>
+            <option value="Car">Car</option>
+            <option value="Animal">Animal</option>
+          </select>
+        </div>
+
+        <div class="year-filters">
+          <label for="year-from-range">Year From:</label>
+          <input
+            type="range"
+            id="year-from-range"
+            name="year"
+            min="1950"
+            max="2024"
+          />
+          <span id="year-from-display">1987</span>
+
+          <label for="year-to-range">Year To:</label>
+          <input
+            type="range"
+            id="year-to-range"
+            name="year"
+            min="1950"
+            max="2024"
+          />
+          <span id="year-to-display">1987</span>
+        </div>
+      </div>
 
       <section id="ads-section" class="ads-section">
         <h2 class="section-title">Advertisements</h2>
@@ -55,6 +86,10 @@
       const maxPriceFilter = document.getElementById("max-price-filter");
       const categorySelect = document.getElementById("category-select");
       const sortSelect = document.getElementById("sort-select");
+      const yearToRange = document.getElementById("year-to-range");
+      const yearToDisplay = document.getElementById("year-to-display");
+      const yearFromRange = document.getElementById("year-from-range");
+      const yearFromDisplay = document.getElementById("year-from-display");
 
       function updateView() {
         const title = titleFilter.value;
@@ -63,13 +98,17 @@
           Number(maxPriceFilter.value) || Number.MAX_SAFE_INTEGER;
         const category = categorySelect.value;
         const sort = sortSelect.value;
+        const yearFrom = yearFromRange.value;
+        const yearTo = yearToRange.value;
 
         const ads = model.filterAndSortAds(
           title,
           minPrice,
           maxPrice,
           category,
-          sort
+          sort,
+          yearFrom,
+          yearTo
         );
         view.displayAds(ads);
       }
@@ -79,8 +118,31 @@
       maxPriceFilter.addEventListener("input", updateView);
       sortSelect.addEventListener("change", updateView);
       categorySelect.addEventListener("change", updateView);
+      yearToRange.addEventListener("input", updateView);
+      yearFromRange.addEventListener("input", updateView);
 
       updateView();
+
+      yearToRange.addEventListener("input", () => {
+        yearToDisplay.textContent = yearToRange.value;
+      });
+
+      yearFromRange.addEventListener("input", () => {
+        yearFromDisplay.textContent = yearFromRange.value;
+      });
+
+      const controls = document.getElementById("controls");
+      const toggleButton = document.getElementById("toggle-controls");
+
+      toggleButton.addEventListener("click", () => {
+        if (controls.classList.contains("hidden")) {
+          controls.classList.remove("hidden");
+          toggleButton.textContent = "Hide controls";
+        } else {
+          controls.classList.add("hidden");
+          toggleButton.textContent = "Show controls";
+        }
+      });
 
       view.displayAds(model.getAllAds());
     </script>

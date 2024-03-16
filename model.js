@@ -1,16 +1,18 @@
 class Ad {
-  constructor(title, description, price, image = null) {
+  constructor(title, description, price, image, category) {
     this.title = title;
     this.description = description;
     this.price = price;
     this.image = image;
+    this.category = category;
     this.createdAt = new Date();
+    this.id = Math.floor(Math.random() * 1000000);
   }
 }
 
 class AdsModel {
   constructor() {
-    this.ads = JSON.parse(localStorage.getItem("ads")) || [];
+    this.ads = JSON.parse(localStorage.getItem("ads"));
   }
 
   saveAdsToLocalStorage() {
@@ -23,8 +25,8 @@ class AdsModel {
     this.saveAdsToLocalStorage();
   }
 
-  getAd(index) {
-    return this.ads[index];
+  getAd(id) {
+    return this.ads.find((ad) => ad.id === id);
   }
 
   getAllAds() {
@@ -47,7 +49,15 @@ class AdsModel {
     return ads.sort((a, b) => b.price - a.price);
   }
 
-  filterAndSortAds(title, minPrice, maxPrice, category, sortCriteria) {
+  filterAndSortAds(
+    title,
+    minPrice,
+    maxPrice,
+    category,
+    sortCriteria,
+    yearFrom,
+    yearTo
+  ) {
     let result = this.ads;
 
     if (title) {
@@ -62,6 +72,12 @@ class AdsModel {
 
     if (category) {
       result = result.filter((ad) => ad.category === category);
+    }
+
+    if (yearFrom != 1987 || yearTo != 1987) {
+      result = result.filter(
+        (ad) => ad.release >= yearFrom && ad.release <= yearTo
+      );
     }
 
     switch (sortCriteria) {
@@ -82,15 +98,21 @@ class AdsModel {
     return result;
   }
 
-  deleteAd(index) {
-    this.ads.splice(index, 1);
+  deleteAd(id) {
+    this.ads.splice(
+      this.ads.findIndex((ad) => ad.id === id),
+      1
+    );
     this.saveAdsToLocalStorage();
   }
-  editAd(index, title, description, price, image) {
+
+  editAd(id, title, description, price, image, category, release) {
+    const index = this.ads.findIndex((ad) => ad.id === id);
     this.ads[index].title = title;
     this.ads[index].description = description;
     this.ads[index].price = price;
     this.ads[index].image = image;
+    this.ads[index].category = category;
     this.saveAdsToLocalStorage();
   }
 }
