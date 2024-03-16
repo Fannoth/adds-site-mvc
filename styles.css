@@ -125,6 +125,8 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
 }
 
 .ad h3 {
@@ -150,4 +152,23 @@
 
 .ad button:hover {
   background-color: #0056b3;
+}
+
+.ad img {
+  max-width: 100%; /* Maksymalna szerokość obrazka to szerokość kontenera ogłoszenia */
+  max-height: 200px; /* Maksymalna wysokość obrazka */
+  display: block; /* Ustawienie obrazka jako blokowy, aby uniknąć białego miejsca pod obrazkiem */
+  margin: 0 auto; /* Automatyczne wyśrodkowanie obrazka */
+}
+
+/* Style dla stopki */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

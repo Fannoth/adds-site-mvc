@@ -33,14 +33,28 @@
             class="ad-input"
             placeholder="Price"
           />
-          <input type="file" id="image" class="ad-input" accept="image/*" />
+          <input
+            type="url"
+            id="imageURL"
+            class="ad-input"
+            placeholder="Image URL"
+          />
           <button type="submit" class="ad-button">Add Ad</button>
         </form>
+        <div id="success-message" style="display: none">
+          <p>Advertisement added successfully!</p>
+          <button id="back-to-ads-button" onclick="redirectToAdvertisements()">
+            Back to Advertisements
+          </button>
+        </div>
       </section>
     </main>
-    <script src="Model.js"></script>
-    <script src="View.js"></script>
-    <script src="Controller.js"></script>
+    <footer class="footer">
+      <p>&copy; 2024 Jakub Czucha & Marcin Jedynak. All rights reserved.</p>
+    </footer>
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
     <script>
       document
         .getElementById("ad-form")
@@ -49,9 +63,13 @@
           const title = document.getElementById("title").value;
           const description = document.getElementById("description").value;
           const price = document.getElementById("price").value;
-          const image = document.getElementById("image").files[0]; // Pobierz pierwsze zdjęcie z wybranego pliku
-          controller.addAd(title, description, price, image);
+          const imageURL = document.getElementById("imageURL").value; // Pobierz link do obrazu
+          controller.addAd(title, description, price, imageURL); // Przekazanie linku do obrazu do metody addAd
         });
+
+      function redirectToAdvertisements() {
+        window.location.href = "advertisements.html";
+      }
     </script>
   </body>
 </html>

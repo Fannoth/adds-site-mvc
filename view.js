@@ -3,6 +3,11 @@ class AdsView {
     this.adList = document.getElementById("ad-list");
   }
 
+  showSuccessMessage() {
+    const successMessage = document.getElementById("success-message");
+    successMessage.style.display = "block";
+  }
+
   displayAds(ads) {
     this.adList.innerHTML = "";
     ads.forEach((ad, index) => {
@@ -21,6 +26,13 @@ class AdsView {
       priceElement.textContent = `Price: ${ad.price}`;
       adElement.appendChild(priceElement);
 
+      if (ad.image) {
+        const imageElement = document.createElement("img");
+        imageElement.src = ad.image;
+        imageElement.alt = "Ad Image";
+        adElement.appendChild(imageElement);
+      }
+
       const deleteButton = document.createElement("button");
       deleteButton.textContent = "Delete";
       deleteButton.addEventListener("click", () => {
@@ -36,11 +48,6 @@ class AdsView {
     document.getElementById("title").value = "";
     document.getElementById("description").value = "";
     document.getElementById("price").value = "";
+    document.getElementById("imageURL").value = "";
   }
 }
-
-const view = new AdsView();
-const model = new AdsModel();
-const controller = new AdsController(model, view);
-
-view.displayAds(model.getAllAds());

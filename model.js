@@ -1,8 +1,9 @@
 class Ad {
-  constructor(title, description, price) {
+  constructor(title, description, price, image = null) {
     this.title = title;
     this.description = description;
     this.price = price;
+    this.image = image;
     this.createdAt = new Date();
   }
 }
@@ -16,8 +17,8 @@ class AdsModel {
     localStorage.setItem("ads", JSON.stringify(this.ads));
   }
 
-  addAd(title, description, price) {
-    const ad = new Ad(title, description, price);
+  addAd(title, description, price, image) {
+    const ad = new Ad(title, description, price, image);
     this.ads.push(ad);
     this.saveAdsToLocalStorage();
   }
