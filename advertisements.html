@@ -18,6 +18,25 @@
       </nav>
     </header>
     <main>
+      <div class="filters">
+        <input type="text" id="title-filter" placeholder="Filter by title" />
+        <input type="number" id="min-price-filter" placeholder="Min price" />
+        <input type="number" id="max-price-filter" placeholder="Max price" />
+      </div>
+
+      <select id="sort-select" class="select">
+        <option value="">Sort by...</option>
+        <option value="title-A-Z">Title A-Z</option>
+        <option value="title-Z-A">Title Z-A</option>
+        <option value="lowest-price">Lowest price</option>
+        <option value="highest-price">Highest price</option>
+      </select>
+      <select id="category-select" class="select">
+        <option value="">Filter by category...</option>
+        <option value="Lost">Lost</option>
+        <option value="Found">Found</option>
+      </select>
+
       <section id="ads-section" class="ads-section">
         <h2 class="section-title">Advertisements</h2>
         <div class="ad-list" id="ad-list"></div>
@@ -31,6 +50,38 @@
     <script src="controller.js"></script>
 
     <script>
+      const titleFilter = document.getElementById("title-filter");
+      const minPriceFilter = document.getElementById("min-price-filter");
+      const maxPriceFilter = document.getElementById("max-price-filter");
+      const categorySelect = document.getElementById("category-select");
+      const sortSelect = document.getElementById("sort-select");
+
+      function updateView() {
+        const title = titleFilter.value;
+        const minPrice = Number(minPriceFilter.value) || 0;
+        const maxPrice =
+          Number(maxPriceFilter.value) || Number.MAX_SAFE_INTEGER;
+        const category = categorySelect.value;
+        const sort = sortSelect.value;
+
+        const ads = model.filterAndSortAds(
+          title,
+          minPrice,
+          maxPrice,
+          category,
+          sort
+        );
+        view.displayAds(ads);
+      }
+
+      titleFilter.addEventListener("input", updateView);
+      minPriceFilter.addEventListener("input", updateView);
+      maxPriceFilter.addEventListener("input", updateView);
+      sortSelect.addEventListener("change", updateView);
+      categorySelect.addEventListener("change", updateView);
+
+      updateView();
+
       view.displayAds(model.getAllAds());
     </script>
   </body>

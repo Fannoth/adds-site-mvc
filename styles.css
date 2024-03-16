@@ -115,7 +115,11 @@
 
 .ad-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(5, auto); /* 5 wierszy o rozmiarze auto */
+  grid-template-columns: repeat(
+    5,
+    minmax(200px, 1fr)
+  ); /* dynamiczna liczba kolumn o minimalnej szerokości 200px */
   gap: 20px;
 }
 
@@ -155,10 +159,11 @@
 }
 
 .ad img {
-  max-width: 100%; /* Maksymalna szerokość obrazka to szerokość kontenera ogłoszenia */
-  max-height: 200px; /* Maksymalna wysokość obrazka */
-  display: block; /* Ustawienie obrazka jako blokowy, aby uniknąć białego miejsca pod obrazkiem */
-  margin: 0 auto; /* Automatyczne wyśrodkowanie obrazka */
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Style dla stopki */
@@ -171,4 +176,28 @@
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.filters input {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.select {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
