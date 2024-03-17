@@ -74,6 +74,11 @@
         <h2 class="section-title">Advertisements</h2>
         <div class="ad-list" id="ad-list"></div>
       </section>
+      <div id="pagination">
+        <span id="pagination-info">Page: 1</span>
+        <button id="prev-page">Previous</button>
+        <button id="next-page">Next</button>
+      </div>
       <footer class="footer">
         <p>&copy; 2024 Jakub Czucha & Marcin Jedynak. All rights reserved.</p>
       </footer>
@@ -146,7 +151,29 @@
         }
       });
 
-      view.displayAds(model.getAllAds());
+      const paginationInfo = document.getElementById("pagination-info");
+      const prevPageButton = document.getElementById("prev-page");
+      const nextPageButton = document.getElementById("next-page");
+
+      prevPageButton.addEventListener("click", () => {
+        if (view.currentPage > 1) {
+          view.currentPage--;
+          view.displayAdsForPage(view.currentPage);
+        }
+        paginationInfo.textContent = `Page: ${view.currentPage}`;
+        view.displayPagination();
+      });
+
+      nextPageButton.addEventListener("click", () => {
+        const maxPage = Math.ceil(model.ads.length / model.itemsPerPage);
+        if (view.currentPage < maxPage) {
+          view.currentPage++;
+          view.displayAdsForPage(view.currentPage);
+        }
+        paginationInfo.textContent = `Page: ${view.currentPage}`;
+      });
+
+      view.displayAdsForPage(view.currentPage);
     </script>
   </body>
 </html>

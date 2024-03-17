@@ -13,6 +13,13 @@ class Ad {
 class AdsModel {
   constructor() {
     this.ads = JSON.parse(localStorage.getItem("ads"));
+    this.itemsPerPage = 10;
+  }
+
+  getPageAds(pageNumber) {
+    const startIndex = (pageNumber - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.ads.slice(startIndex, endIndex);
   }
 
   saveAdsToLocalStorage() {
