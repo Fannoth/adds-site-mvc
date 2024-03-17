@@ -34,6 +34,7 @@ class AdsView {
 
   fillFormForEditing(ad) {
     const {id, title, description, price, image, category, release} = ad;
+    const adElement = document.getElementById(`ad-${id}`);
     const titleElement = document.getElementById(`title-${id}`);
     const descriptionElement = document.getElementById(`description-${id}`);
     const priceElement = document.getElementById(`price-${id}`);
@@ -41,9 +42,27 @@ class AdsView {
     const categoryElement = document.getElementById(`category-${id}`);
     const releaseElement = document.getElementById(`release-${id}`);
 
+    const labelForTitle = document.createElement("label");
+    const labelForDescription = document.createElement("label");
+    const labelForPrice = document.createElement("label");
+    const labelForCategory = document.createElement("label");
+    const labelForRelease = document.createElement("label");
+    const labelForImage = document.createElement("label");
+
+    labelForTitle.outerHTML = `<label for="title" id="label-title">Title</label>`;
+    adElement.insertBefore(labelForTitle, titleElement);
     titleElement.outerHTML = `<input type="text" id="title-${id}" class="ad-input" value="${title}">`;
+
+    adElement.insertBefore(labelForDescription, descriptionElement);
+    labelForDescription.outerHTML = `<label for="description" id="label-description">Description</label>`;
     descriptionElement.outerHTML = `<input type="text" id="description-${id}"  class="ad-input ad-textarea" value="${description}">`;
+
+    adElement.insertBefore(labelForPrice, priceElement);
+    labelForPrice.outerHTML = `<label for="price" id="label-price">Price</label>`;
     priceElement.outerHTML = `<input type="number" id="price-${id}" class="ad-input" value="${price}">`;
+
+    adElement.insertBefore(labelForCategory, categoryElement);
+    labelForCategory.outerHTML = `<label for="category" id="label-category">Category</label>`;
     categoryElement.outerHTML = `
 <select id="category-${id}" class="ad-input">
   <option value="Drug" ${category === "Drug" ? "selected" : ""}>Drug</option>
@@ -53,8 +72,13 @@ class AdsView {
     category === "Animal" ? "selected" : ""
   }>Animal</option>
 </select>`;
+
+    adElement.insertBefore(labelForRelease, releaseElement);
+    labelForRelease.outerHTML = `<label for="release" id="label-release">Release</label>`;
     releaseElement.outerHTML = `<input type="number" id="release-${id}" class="ad-input" value="${release}">`;
 
+    adElement.insertBefore(labelForImage, imageElement);
+    labelForImage.outerHTML = `<label for="imageURL" id="label-image">Image URL</label>`;
     imageElement.outerHTML = `<input type="text" id="image-${id}" class="ad-input" value="${
       image || ""
     }">`;
@@ -91,7 +115,6 @@ class AdsView {
       this.displayAds(this.model.ads);
     });
 
-    const adElement = document.getElementById(`ad-${id}`);
     adElement.appendChild(acceptButton);
     adElement.appendChild(cancelButton);
   }
