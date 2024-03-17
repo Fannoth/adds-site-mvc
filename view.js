@@ -2,11 +2,29 @@ class AdsView {
   constructor(model) {
     this.model = model;
     this.adList = document.getElementById("ad-list");
+    this.currentPage = 1; //
   }
 
   showSuccessMessage() {
     const successMessage = document.getElementById("success-message");
     successMessage.style.display = "block";
+  }
+
+  displayAdsForPage(pageNumber) {
+    const ads = this.model.getPageAds(pageNumber);
+    this.displayAds(ads);
+  }
+
+  displayPagination() {
+    this.pagination.innerHTML = "";
+    const totalPages = Math.ceil(this.model.ads.length / this.model.adsPerPage);
+    const prevPageButton = document.getElementById("prev-page");
+    const nextPageButton = document.getElementById("next-page");
+    prevPageButton.disabled = this.model.currentPage === 1;
+    nextPageButton.disabled = this.model.currentPage === totalPages;
+    const pageInfo = document.createElement("span");
+    pageInfo.textContent = `Page ${this.model.currentPage} of ${totalPages}`;
+    this.pagination.appendChild(pageInfo);
   }
 
   createEditButton(id) {
@@ -41,10 +59,23 @@ class AdsView {
     const categoryElement = document.getElementById(`category-${id}`);
     const releaseElement = document.getElementById(`release-${id}`);
 
-    titleElement.outerHTML = `<input type="text" id="title-${id}" class="ad-input" value="${title}">`;
-    descriptionElement.outerHTML = `<input type="text" id="description-${id}"  class="ad-input ad-textarea" value="${description}">`;
-    priceElement.outerHTML = `<input type="number" id="price-${id}" class="ad-input" value="${price}">`;
+    titleElement.outerHTML = `
+<label for="title-${id}">Title</label>
+<input type="text" id="title-${id}" class="ad-input" value="${title}">
+`;
+
+    descriptionElement.outerHTML = `
+<label for="description-${id}">Description</label>
+<input type="text" id="description-${id}"  class="ad-input ad-textarea" value="${description}">
+`;
+
+    priceElement.outerHTML = `
+<label for="price-${id}">Price</label>
+<input type="number" id="price-${id}" class="ad-input" value="${price}">
+`;
+
     categoryElement.outerHTML = `
+<label for="category-${id}">Category</label>
 <select id="category-${id}" class="ad-input">
   <option value="Drug" ${category === "Drug" ? "selected" : ""}>Drug</option>
   <option value="Phone" ${category === "Phone" ? "selected" : ""}>Phone</option>
@@ -52,12 +83,18 @@ class AdsView {
   <option value="Animal" ${
     category === "Animal" ? "selected" : ""
   }>Animal</option>
-</select>`;
-    releaseElement.outerHTML = `<input type="number" id="release-${id}" class="ad-input" value="${release}">`;
+</select>
+`;
 
-    imageElement.outerHTML = `<input type="text" id="image-${id}" class="ad-input" value="${
-      image || ""
-    }">`;
+    releaseElement.outerHTML = `
+<label for="release-${id}">Release Year</label>
+<input type="number" id="release-${id}" class="ad-input" value="${release}">
+`;
+
+    imageElement.outerHTML = `
+<label for="image-${id}">Image URL</label>
+<input type="text" id="image-${id}" class="ad-input" value="${image || ""}">
+`;
 
     const editButton = document.getElementById(`edit-${id}`);
     const deleteButton = document.getElementById(`delete-${id}`);
