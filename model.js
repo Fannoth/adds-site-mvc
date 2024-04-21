@@ -16,10 +16,10 @@ class AdsModel {
     this.itemsPerPage = 10;
   }
 
-  getPageAds(pageNumber) {
+  getPageAds(ads, pageNumber) {
     const startIndex = (pageNumber - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
-    return this.ads.slice(startIndex, endIndex);
+    return ads.slice(startIndex, endIndex);
   }
 
   saveAdsToLocalStorage() {

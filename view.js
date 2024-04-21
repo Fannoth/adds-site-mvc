@@ -2,7 +2,17 @@ class AdsView {
   constructor(model) {
     this.model = model;
     this.adList = document.getElementById("ad-list");
-    this.currentPage = 1; //
+    this.currentPage = 1;
+    this.currentFilters = {
+      // Default filter settings
+      title: "",
+      minPrice: 0,
+      maxPrice: Number.MAX_SAFE_INTEGER,
+      category: "",
+      sortCriteria: "",
+      yearFrom: 1950,
+      yearTo: 2024,
+    };
   }
 
   showSuccessMessage() {
@@ -11,19 +21,36 @@ class AdsView {
   }
 
   displayAdsForPage(pageNumber) {
-    const ads = this.model.getPageAds(pageNumber);
-    this.displayAds(ads);
+    const filteredAds = this.model.filterAndSortAds(
+      this.currentFilters.title,
+      this.currentFilters.minPrice,
+      this.currentFilters.maxPrice,
+      this.currentFilters.category,
+      this.currentFilters.sortCriteria,
+      this.currentFilters.yearFrom,
+      this.currentFilters.yearTo
+    );
+    this.currentPage = pageNumber; // Update current page
+    const pageAds = this.model.getPageAds(filteredAds, pageNumber);
+    this.displayAds(pageAds);
   }
 
   displayPagination() {
-    this.pagination.innerHTML = "";
-    const totalPages = Math.ceil(this.model.ads.length / this.model.adsPerPage);
+    const totalPages = Math.ceil(model.ads.length / model.itemsPerPage);
     const prevPageButton = document.getElementById("prev-page");
     const nextPageButton = document.getElementById("next-page");
-    prevPageButton.disabled = this.model.currentPage === 1;
-    nextPageButton.disabled = this.model.currentPage === totalPages;
-    const pageInfo = document.createElement("span");
-    pageInfo.textContent = `Page ${this.model.currentPage} of ${totalPages}`;
+    if (view.currentPage === 1) {
+      prevPageButton.setAttribute("disabled", true);
+    } else {
+      prevPageButton.removeAttribute("disabled");
+    }
+    if (view.currentPage === totalPages) {
+      nextPageButton.setAttribute("disabled", true);
+    } else {
+      nextPageButton.removeAttribute("disabled");
+    }
+    const pageInfo = document.getElementById("pagination-info");
+    pageInfo.textContent = `Page ${view.currentPage} of ${totalPages}`;
     this.pagination.appendChild(pageInfo);
   }
 

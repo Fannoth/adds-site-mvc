@@ -108,6 +108,17 @@
         const yearFrom = yearFromRange.value;
         const yearTo = yearToRange.value;
 
+        // Update currentFilters in view
+        view.currentFilters = {
+          title,
+          minPrice,
+          maxPrice,
+          category,
+          sortCriteria: sort,
+          yearFrom,
+          yearTo,
+        };
+
         const ads = model.filterAndSortAds(
           title,
           minPrice,
@@ -117,7 +128,8 @@
           yearFrom,
           yearTo
         );
-        view.displayAds(ads);
+        view.displayAdsForPage(view.currentPage);
+        // view.displayPagination();
       }
 
       titleFilter.addEventListener("input", updateView);
@@ -160,7 +172,6 @@
           view.currentPage--;
           view.displayAdsForPage(view.currentPage);
         }
-        paginationInfo.textContent = `Page: ${view.currentPage}`;
         view.displayPagination();
       });
 
@@ -170,7 +181,7 @@
           view.currentPage++;
           view.displayAdsForPage(view.currentPage);
         }
-        paginationInfo.textContent = `Page: ${view.currentPage}`;
+        view.displayPagination();
       });
 
       view.displayAdsForPage(view.currentPage);

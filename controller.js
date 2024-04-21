@@ -46,7 +46,8 @@ const dummy_data = [
     description: "Allview P7 Xtreme",
     release: 2014,
     category: "Phone",
-    image: "https://www.allviewmobile.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/7/p7_xtreme_semiprofil_white_1_1.jpg",
+    image:
+      "https://www.allviewmobile.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/7/p7_xtreme_semiprofil_white_1_1.jpg",
     price: 114143,
   },
   {
@@ -91,7 +92,8 @@ const dummy_data = [
     description: "Huawei Ascend G700",
     release: 2013,
     category: "Phone",
-    image: "https://media.cdn.videotesty.pl/media/pliki/produkty/2013/12/06/HUAWEI_Ascend_G700.jpg",
+    image:
+      "https://media.cdn.videotesty.pl/media/pliki/produkty/2013/12/06/HUAWEI_Ascend_G700.jpg",
     price: 24293,
   },
   {
@@ -100,7 +102,8 @@ const dummy_data = [
     description: "Lava Iris X1 Atom S",
     release: 2015,
     category: "Phone",
-    image: "https://imei24.com/img/lava/14_02_31_622201562610PM_635_lava_iris_x1_atom_s.jpg",
+    image:
+      "https://imei24.com/img/lava/14_02_31_622201562610PM_635_lava_iris_x1_atom_s.jpg",
     price: 165597,
   },
   {
@@ -109,7 +112,8 @@ const dummy_data = [
     description: "Samsung SGH-500",
     release: 1998,
     category: "Phone",
-    image: "https://files.mgsm.pl/phones/samsung-sgh-500/samsung-sgh-500-big.jpg",
+    image:
+      "https://files.mgsm.pl/phones/samsung-sgh-500/samsung-sgh-500-big.jpg",
     price: 143185,
   },
   {
@@ -118,7 +122,8 @@ const dummy_data = [
     description: "Micromax Canvas Selfie 4",
     release: 2016,
     category: "Phone",
-    image: "https://5.imimg.com/data5/QU/KK/MY-20388692/micromax-canvas-selfie-4-plus-q349-mobiles-silver.jpg",
+    image:
+      "https://5.imimg.com/data5/QU/KK/MY-20388692/micromax-canvas-selfie-4-plus-q349-mobiles-silver.jpg",
     price: 61704,
   },
   {
@@ -127,7 +132,8 @@ const dummy_data = [
     description: "Sagem MW 3026",
     release: 2001,
     category: "Phone",
-    image: "https://a.allegroimg.com/original/116b82/fca9e4e2489681695d3434ea21a2/KLASYK-SAGEM-MW3026-WADA-ZABYTEK",
+    image:
+      "https://a.allegroimg.com/original/116b82/fca9e4e2489681695d3434ea21a2/KLASYK-SAGEM-MW3026-WADA-ZABYTEK",
     price: 114979,
   },
   {
@@ -136,7 +142,8 @@ const dummy_data = [
     description: "Plum Bubby",
     release: 2012,
     category: "Phone",
-    image: "https://m-cdn.phonearena.com/images/phones/42675-350/Plum-Bubby.jpg?w=1",
+    image:
+      "https://m-cdn.phonearena.com/images/phones/42675-350/Plum-Bubby.jpg?w=1",
     price: 101799,
   },
   {
@@ -154,7 +161,8 @@ const dummy_data = [
     description: "Samsung Galaxy A42 5G",
     release: 2020,
     category: "Phone",
-    image: "https://image.ceneostatic.pl/data/products/100463610/p-samsung-galaxy-a42-5g-sm-a426-4-128gb-czarny.jpg",
+    image:
+      "https://image.ceneostatic.pl/data/products/100463610/p-samsung-galaxy-a42-5g-sm-a426-4-128gb-czarny.jpg",
     price: 56813,
   },
   {
@@ -163,7 +171,8 @@ const dummy_data = [
     description: "Panasonic Eluga L 4G",
     release: 2015,
     category: "Phone",
-    image: "https://files.mgsm.pl/phones/panasonic-eluga-l-4g/panasonic-eluga-l-4g-04.jpg",
+    image:
+      "https://files.mgsm.pl/phones/panasonic-eluga-l-4g/panasonic-eluga-l-4g-04.jpg",
     price: 34506,
   },
   {
@@ -172,7 +181,8 @@ const dummy_data = [
     description: "940",
     release: 1994,
     category: "Car",
-    image: "https://ocdn.eu/rankings-content-transforms/1/QT0k9ktY2FyQ2F0YWxvZ3VlLzg1MDk4ZDE0YWQzNWE0MGM4MzVkM2NlYzc3MzNjNWRjkpUDAAHNDdfNBq-TBc0DFM0BvN4AAqEwBaExAA",
+    image:
+      "https://ocdn.eu/rankings-content-transforms/1/QT0k9ktY2FyQ2F0YWxvZ3VlLzg1MDk4ZDE0YWQzNWE0MGM4MzVkM2NlYzc3MzNjNWRjkpUDAAHNDdfNBq-TBc0DFM0BvN4AAqEwBaExAA",
     price: 164353,
   },
   {
@@ -181,7 +191,8 @@ const dummy_data = [
     description: "Allante",
     release: 1992,
     category: "Car",
-    image: "https://images.ctfassets.net/uaddx06iwzdz/2xCDBGM6Xo5rk3BEV40VkA/fa94193e556fd6fa46f7e5deb663341e/cadillac-allante-l-01.jpg",
+    image:
+      "https://images.ctfassets.net/uaddx06iwzdz/2xCDBGM6Xo5rk3BEV40VkA/fa94193e556fd6fa46f7e5deb663341e/cadillac-allante-l-01.jpg",
     price: 53834,
   },
   {
@@ -190,7 +201,8 @@ const dummy_data = [
     description: "5 Series",
     release: 1992,
     category: "Car",
-    image: "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/5-Series-2024/10182/1685002609273/front-left-side-47.jpg",
+    image:
+      "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/5-Series-2024/10182/1685002609273/front-left-side-47.jpg",
     price: 89687,
   },
   {
@@ -199,7 +211,8 @@ const dummy_data = [
     description: "Tredia",
     release: 1987,
     category: "Car",
-    image: "https://parkers-images.bauersecure.com/wp-images/20360/cut-out/420x280/mitsi_tredia82.jpg",
+    image:
+      "https://parkers-images.bauersecure.com/wp-images/20360/cut-out/420x280/mitsi_tredia82.jpg",
     price: 35293,
   },
   {
@@ -208,7 +221,8 @@ const dummy_data = [
     description: "Grand Cherokee",
     release: 2003,
     category: "Car",
-    image: "https://www.motortrend.com/uploads/2022/10/008-2022-Jeep-Grand-Cherokee.jpg",
+    image:
+      "https://www.motortrend.com/uploads/2022/10/008-2022-Jeep-Grand-Cherokee.jpg",
     price: 86355,
   },
   {
@@ -217,7 +231,8 @@ const dummy_data = [
     description: "Passat",
     release: 2003,
     category: "Car",
-    image: "https://uploads.vw-mms.de/system/production/images/vwn/029/415/images/869424d4159b91be4431c309c1e63f53ea727f0f/DB2019AU00902_web_1600.jpg?1649155074",
+    image:
+      "https://uploads.vw-mms.de/system/production/images/vwn/029/415/images/869424d4159b91be4431c309c1e63f53ea727f0f/DB2019AU00902_web_1600.jpg?1649155074",
     price: 197893,
   },
   {
@@ -226,7 +241,8 @@ const dummy_data = [
     description: "164",
     release: 1994,
     category: "Car",
-    image: "https://www.historics.co.uk/media/1667227/ref-70-alfa-romeo-164-1.jpg?anchor=center&mode=crop&width=1000",
+    image:
+      "https://www.historics.co.uk/media/1667227/ref-70-alfa-romeo-164-1.jpg?anchor=center&mode=crop&width=1000",
     price: 75452,
   },
   {
@@ -235,7 +251,8 @@ const dummy_data = [
     description: "T100 Xtra",
     release: 1998,
     category: "Car",
-    image: "https://i0.wp.com/www.curbsideclassic.com/wp-content/uploads/2019/10/iaGA8HHR1KoFBkxKCqNw_thumb_9df5.jpg",
+    image:
+      "https://i0.wp.com/www.curbsideclassic.com/wp-content/uploads/2019/10/iaGA8HHR1KoFBkxKCqNw_thumb_9df5.jpg",
     price: 80570,
   },
   {
@@ -244,7 +261,8 @@ const dummy_data = [
     description: "Suburban 2500",
     release: 2007,
     category: "Car",
-    image: "https://edgecast-img.yahoo.net/mysterio/api/E14A3AFD19D33EFB8DFD7CBC55EA7D81BBE1F5171FEDC2ED8A4483384CA36DA7/autoblog/resizefill_w660_h372;quality_80;format_webp;cc_31536000;/https://s.aolcdn.com/commerce/autodata/images/20CTGEZ1.jpg",
+    image:
+      "https://edgecast-img.yahoo.net/mysterio/api/E14A3AFD19D33EFB8DFD7CBC55EA7D81BBE1F5171FEDC2ED8A4483384CA36DA7/autoblog/resizefill_w660_h372;quality_80;format_webp;cc_31536000;/https://s.aolcdn.com/commerce/autodata/images/20CTGEZ1.jpg",
     price: 35439,
   },
   {
@@ -253,7 +271,8 @@ const dummy_data = [
     description: "QX",
     release: 2010,
     category: "Car",
-    image: "https://cdn.motor1.com/images/mgl/JO9eXE/745:1207:6382:4789/infiniti-qx-monograph-front-quarter.webp",
+    image:
+      "https://cdn.motor1.com/images/mgl/JO9eXE/745:1207:6382:4789/infiniti-qx-monograph-front-quarter.webp",
     price: 171882,
   },
   {
@@ -262,7 +281,8 @@ const dummy_data = [
     description: "Colt",
     release: 1994,
     category: "Car",
-    image: "https://cdn11.bigcommerce.com/s-rnmf5r1skr/product_images/VehicleImages/1984PlymouthColt.jpg",
+    image:
+      "https://cdn11.bigcommerce.com/s-rnmf5r1skr/product_images/VehicleImages/1984PlymouthColt.jpg",
     price: 77053,
   },
   {
@@ -271,7 +291,8 @@ const dummy_data = [
     description: "DTS",
     release: 2008,
     category: "Car",
-    image: "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/10q1/339566/2010-cadillac-dts-photo-344749-s-986x603.jpg",
+    image:
+      "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/10q1/339566/2010-cadillac-dts-photo-344749-s-986x603.jpg",
     price: 76130,
   },
   {
@@ -280,7 +301,8 @@ const dummy_data = [
     description: "Sable",
     release: 2004,
     category: "Car",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/3rd-Mercury-Sable-sedan.jpg/800px-3rd-Mercury-Sable-sedan.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/3rd-Mercury-Sable-sedan.jpg/800px-3rd-Mercury-Sable-sedan.jpg",
     price: 15107,
   },
   {
@@ -289,7 +311,8 @@ const dummy_data = [
     description: "Forte",
     release: 2011,
     category: "Car",
-    image: "https://cdn.jdpower.com/ArticleImages/JDPA_2020%20Kia%20Forte%20GT%20Fire%20Orange%20Front%20View.jpg",
+    image:
+      "https://cdn.jdpower.com/ArticleImages/JDPA_2020%20Kia%20Forte%20GT%20Fire%20Orange%20Front%20View.jpg",
     price: 40059,
   },
   {
@@ -298,7 +321,8 @@ const dummy_data = [
     description: "Corolla",
     release: 1996,
     category: "Car",
-    image: "https://mag.toyota.co.uk/wp-content/uploads/sites/2/2023/02/2023-Toyota-Corolla-UK-review-01.png",
+    image:
+      "https://mag.toyota.co.uk/wp-content/uploads/sites/2/2023/02/2023-Toyota-Corolla-UK-review-01.png",
     price: 82517,
   },
   {
@@ -307,7 +331,8 @@ const dummy_data = [
     description: "Vyvanse",
     release: 2009,
     category: "Drug",
-    image: "https://media.phillyvoice.com/media/images/AP755231934976.2e16d0ba.fill-1200x630-c0.jpg",
+    image:
+      "https://media.phillyvoice.com/media/images/AP755231934976.2e16d0ba.fill-1200x630-c0.jpg",
     price: 35876,
   },
   {
@@ -325,7 +350,8 @@ const dummy_data = [
     description: "Nortriptyline Hydrochloride",
     release: 1963,
     category: "Drug",
-    image: "https://www.gnhindia.com/wp-content/uploads/2020/04/setidb58d473a-b19f-4d2a-b1ae-dd398d7a29e1nameimage-2.jpg",
+    image:
+      "https://www.gnhindia.com/wp-content/uploads/2020/04/setidb58d473a-b19f-4d2a-b1ae-dd398d7a29e1nameimage-2.jpg",
     price: 28181,
   },
   {
@@ -334,7 +360,8 @@ const dummy_data = [
     description: "OXYGEN",
     release: 2007,
     category: "Drug",
-    image: "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=oxygen2.jpg&id=737515",
+    image:
+      "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=oxygen2.jpg&id=737515",
     price: 120653,
   },
   {
@@ -343,7 +370,8 @@ const dummy_data = [
     description: "Risperidone",
     release: 1995,
     category: "Drug",
-    image: "https://www.solcohealthcare.com/wp-content/uploads/2019/07/Risperidone_1.jpg",
+    image:
+      "https://www.solcohealthcare.com/wp-content/uploads/2019/07/Risperidone_1.jpg",
     price: 51268,
   },
   {
@@ -352,7 +380,8 @@ const dummy_data = [
     description: "SENSAI FLUID FINISH FF203",
     release: 1999,
     category: "Drug",
-    image: "https://image.ceneostatic.pl/data/products/29168226/c9be22c6-4baa-4cc5-b82b-fe3e5ab0fe01_p-kanebo-sensai-fluid-finish-podklad-nawilzajacy-30ml-206-golden-dune.jpg",
+    image:
+      "https://image.ceneostatic.pl/data/products/29168226/c9be22c6-4baa-4cc5-b82b-fe3e5ab0fe01_p-kanebo-sensai-fluid-finish-podklad-nawilzajacy-30ml-206-golden-dune.jpg",
     price: 182525,
   },
   {
@@ -361,7 +390,8 @@ const dummy_data = [
     description: "Amlodipine Besylate and Benazepril Hydrochloride",
     release: 2005,
     category: "Drug",
-    image: "https://greenpharmacyonline.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/0/00591375701_1.jpg",
+    image:
+      "https://greenpharmacyonline.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/0/00591375701_1.jpg",
     price: 80631,
   },
   {
@@ -370,7 +400,8 @@ const dummy_data = [
     description: "Children Coldcalm",
     release: 2008,
     category: "Drug",
-    image: "https://m.media-amazon.com/images/I/71Rr-bB0EpL._AC_UF1000,1000_QL80_.jpg",
+    image:
+      "https://m.media-amazon.com/images/I/71Rr-bB0EpL._AC_UF1000,1000_QL80_.jpg",
     price: 72117,
   },
   {
@@ -379,7 +410,8 @@ const dummy_data = [
     description: "Fluocinolone Acetonide",
     release: 2006,
     category: "Drug",
-    image: "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=fluo-60gram-carton.jpg&id=340732",
+    image:
+      "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=fluo-60gram-carton.jpg&id=340732",
     price: 51452,
   },
   {
@@ -388,7 +420,8 @@ const dummy_data = [
     description: "FOSINOPRIL SODIUM",
     release: 2000,
     category: "Drug",
-    image: "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=Fosinopril+10mg+90ct.jpg&id=445041",
+    image:
+      "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=Fosinopril+10mg+90ct.jpg&id=445041",
     price: 22525,
   },
   {
@@ -397,7 +430,8 @@ const dummy_data = [
     description: "Suave Fresh",
     release: 1993,
     category: "Drug",
-    image: "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=SuaISFresh.jpg&id=33095",
+    image:
+      "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=SuaISFresh.jpg&id=33095",
     price: 27921,
   },
   {
@@ -406,7 +440,8 @@ const dummy_data = [
     description: "Meperidine Hydrochloride",
     release: 2005,
     category: "Drug",
-    image: "https://media.cnn.com/api/v1/images/stellar/prod/160424152457-11-buprenorphine-dangerous-painkillers.jpg?q=w_1600,h_900,x_0,y_0,c_fill/h_618",
+    image:
+      "https://media.cnn.com/api/v1/images/stellar/prod/160424152457-11-buprenorphine-dangerous-painkillers.jpg?q=w_1600,h_900,x_0,y_0,c_fill/h_618",
     price: 188065,
   },
   {
@@ -424,7 +459,8 @@ const dummy_data = [
     description: "Pediaderm TA",
     release: 1992,
     category: "Drug",
-    image: "https://www.empr.com/wp-content/uploads/sites/7/2018/12/pediaderm_92127.jpg",
+    image:
+      "https://www.empr.com/wp-content/uploads/sites/7/2018/12/pediaderm_92127.jpg",
     price: 63709,
   },
   {
@@ -433,7 +469,8 @@ const dummy_data = [
     description: "Care One",
     release: 2007,
     category: "Drug",
-    image: "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=mm1.jpg&id=620539",
+    image:
+      "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=mm1.jpg&id=620539",
     price: 96592,
   },
   {
@@ -442,7 +479,8 @@ const dummy_data = [
     description: "Oryx gazella callotis",
     release: 1987,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Common_beisa_oryx_%28Oryx_beisa_beisa%29_female.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/d/dd/Common_beisa_oryx_%28Oryx_beisa_beisa%29_female.jpg",
     price: 191236,
   },
   {
@@ -451,7 +489,8 @@ const dummy_data = [
     description: "Merops nubicus",
     release: 2004,
     category: "Animal",
-    image: "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/245599991/1800",
+    image:
+      "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/245599991/1800",
     price: 55546,
   },
   {
@@ -469,7 +508,8 @@ const dummy_data = [
     description: "Hystrix cristata",
     release: 1999,
     category: "Animal",
-    image: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/an-african-crested-porcupine-hystrix-cristata-derrick-neill.jpg",
+    image:
+      "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/an-african-crested-porcupine-hystrix-cristata-derrick-neill.jpg",
     price: 153834,
   },
   {
@@ -478,7 +518,8 @@ const dummy_data = [
     description: "Paradoxurus hermaphroditus",
     release: 2010,
     category: "Animal",
-    image: "https://img.myloview.pl/fototapety/civette-palmiste-hermaphrodite-paradoxurus-hermaphroditus-700-189354476.jpg",
+    image:
+      "https://img.myloview.pl/fototapety/civette-palmiste-hermaphrodite-paradoxurus-hermaphroditus-700-189354476.jpg",
     price: 165168,
   },
   {
@@ -487,7 +528,8 @@ const dummy_data = [
     description: "Nucifraga columbiana",
     release: 1996,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Clark%27s_Nutcracker_%28Nucifraga_columbiana%29.jpg/1024px-Clark%27s_Nutcracker_%28Nucifraga_columbiana%29.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Clark%27s_Nutcracker_%28Nucifraga_columbiana%29.jpg/1024px-Clark%27s_Nutcracker_%28Nucifraga_columbiana%29.jpg",
     price: 141122,
   },
   {
@@ -496,7 +538,8 @@ const dummy_data = [
     description: "Certotrichas paena",
     release: 2006,
     category: "Animal",
-    image: "https://s3.animalia.bio/animals/photos/full/original/kalahari-scrub-robin2c-erythropygia-paena-at-pilanesberg-national-park2c-northwest-province2c-south-africa-taken-in-early-sunrise-light-281560463692329.webp",
+    image:
+      "https://s3.animalia.bio/animals/photos/full/original/kalahari-scrub-robin2c-erythropygia-paena-at-pilanesberg-national-park2c-northwest-province2c-south-africa-taken-in-early-sunrise-light-281560463692329.webp",
     price: 146852,
   },
   {
@@ -505,7 +548,8 @@ const dummy_data = [
     description: "Manouria emys",
     release: 2012,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Manouria_emys.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/3/33/Manouria_emys.jpg",
     price: 122368,
   },
   {
@@ -514,7 +558,8 @@ const dummy_data = [
     description: "Heloderma horridum",
     release: 2002,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Heloderma_horridum_L%C3%B6bbecke_Museum.jpg/800px-Heloderma_horridum_L%C3%B6bbecke_Museum.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Heloderma_horridum_L%C3%B6bbecke_Museum.jpg/800px-Heloderma_horridum_L%C3%B6bbecke_Museum.jpg",
     price: 124539,
   },
   {
@@ -523,7 +568,8 @@ const dummy_data = [
     description: "Echimys chrysurus",
     release: 2006,
     category: "Animal",
-    image: "https://www.scifacts.net/wp-content/uploads/2016/09/White-faced-Tree-Rat.jpg",
+    image:
+      "https://www.scifacts.net/wp-content/uploads/2016/09/White-faced-Tree-Rat.jpg",
     price: 71310,
   },
   {
@@ -532,7 +578,8 @@ const dummy_data = [
     description: "Streptopelia senegalensis",
     release: 2008,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/04/Laughing_dove_%28Spilopelia_senegalensis_cambayensis%29.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/0/04/Laughing_dove_%28Spilopelia_senegalensis_cambayensis%29.jpg",
     price: 51423,
   },
   {
@@ -541,7 +588,8 @@ const dummy_data = [
     description: "Phylurus milli",
     release: 1986,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Thick-tailed_Gecko_%28Underwoodisaurus_milii%29_%288636519219%29.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/2/2e/Thick-tailed_Gecko_%28Underwoodisaurus_milii%29_%288636519219%29.jpg",
     price: 96336,
   },
   {
@@ -550,7 +598,8 @@ const dummy_data = [
     description: "Uraeginthus bengalus",
     release: 2007,
     category: "Animal",
-    image: "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/240343061/1800",
+    image:
+      "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/240343061/1800",
     price: 198487,
   },
   {
@@ -559,7 +608,8 @@ const dummy_data = [
     description: "Himantopus himantopus",
     release: 1999,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Black-winged_stilt_%28Himantopus_himantopus%29.jpg/1200px-Black-winged_stilt_%28Himantopus_himantopus%29.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Black-winged_stilt_%28Himantopus_himantopus%29.jpg/1200px-Black-winged_stilt_%28Himantopus_himantopus%29.jpg",
     price: 30112,
   },
   {
@@ -568,7 +618,8 @@ const dummy_data = [
     description: "Larus sp.",
     release: 2008,
     category: "Animal",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Larus_argentatus_ad.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/7f/Larus_argentatus_ad.jpg",
     price: 173753,
   },
 ];
