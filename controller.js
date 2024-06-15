@@ -91,8 +91,7 @@ const dummy_data = [
     description: "Huawei Ascend G700",
     release: 2013,
     category: "Phone",
-    image:
-      "images/HUAWEI_Ascend_G700.jpg",
+    image: "images/HUAWEI_Ascend_G700.jpg",
     price: 24293,
   },
   {
@@ -101,8 +100,7 @@ const dummy_data = [
     description: "Lava Iris X1 Atom S",
     release: 2015,
     category: "Phone",
-    image:
-      "images/lava_iris_x1_atom_s.jpg",
+    image: "images/lava_iris_x1_atom_s.jpg",
     price: 165597,
   },
   {
@@ -111,8 +109,7 @@ const dummy_data = [
     description: "Samsung SGH-500",
     release: 1998,
     category: "Phone",
-    image:
-      "images/samsung-sgh-d500-02.jpg",
+    image: "images/samsung-sgh-d500-02.jpg",
     price: 143185,
   },
   {
@@ -121,8 +118,7 @@ const dummy_data = [
     description: "Micromax Canvas Selfie 4",
     release: 2016,
     category: "Phone",
-    image:
-      "images/41k1N3Bby4L._AC_UF1000,1000_QL80_.jpg",
+    image: "images/41k1N3Bby4L._AC_UF1000,1000_QL80_.jpg",
     price: 61704,
   },
   {
@@ -131,8 +127,7 @@ const dummy_data = [
     description: "Sagem MW 3026",
     release: 2001,
     category: "Phone",
-    image:
-      "images/KLASYK-SAGEM-MW3026-WADA-ZABYTEK.jpg",
+    image: "images/KLASYK-SAGEM-MW3026-WADA-ZABYTEK.jpg",
     price: 114979,
   },
   {
@@ -141,8 +136,7 @@ const dummy_data = [
     description: "Plum Bubby",
     release: 2012,
     category: "Phone",
-    image:
-      "images/15_14_30_plum-bu0bby.jpg",
+    image: "images/15_14_30_plum-bu0bby.jpg",
     price: 101799,
   },
   {
@@ -170,8 +164,7 @@ const dummy_data = [
     description: "Panasonic Eluga L 4G",
     release: 2015,
     category: "Phone",
-    image:
-      "images/panasonic_eluga_l_4g_screen.jpg",
+    image: "images/panasonic_eluga_l_4g_screen.jpg",
     price: 34506,
   },
   {
@@ -180,8 +173,7 @@ const dummy_data = [
     description: "940",
     release: 1994,
     category: "Car",
-    image:
-      "images/volvo_940_02.jpg",
+    image: "images/volvo_940_02.jpg",
     price: 164353,
   },
   {
@@ -190,8 +182,7 @@ const dummy_data = [
     description: "Allante",
     release: 1992,
     category: "Car",
-    image:
-      "images/14607_p50_l.jpg",
+    image: "images/14607_p50_l.jpg",
     price: 53834,
   },
   {
@@ -200,8 +191,7 @@ const dummy_data = [
     description: "5 Series",
     release: 1992,
     category: "Car",
-    image:
-      "images/2024-bmw-5-series-first-drive-review.jpg",
+    image: "images/2024-bmw-5-series-first-drive-review.jpg",
     price: 89687,
   },
   {
@@ -210,8 +200,7 @@ const dummy_data = [
     description: "Tredia",
     release: 1987,
     category: "Car",
-    image:
-      "images/Mitsubishi-Tredia-1024x768.jpeg",
+    image: "images/Mitsubishi-Tredia-1024x768.jpeg",
     price: 35293,
   },
   {
@@ -220,8 +209,7 @@ const dummy_data = [
     description: "Grand Cherokee",
     release: 2003,
     category: "Car",
-    image:
-      "images/ab475ddac2489938cac84437d18e7a2ffd2c8698.jpeg",
+    image: "images/ab475ddac2489938cac84437d18e7a2ffd2c8698.jpeg",
     price: 86355,
   },
   {
@@ -230,8 +218,7 @@ const dummy_data = [
     description: "Passat",
     release: 2003,
     category: "Car",
-    image:
-      "images/VW_Passat_CC_2.0_TDI_DSG_Reflexsilber.JPG",
+    image: "images/VW_Passat_CC_2.0_TDI_DSG_Reflexsilber.JPG",
     price: 197893,
   },
   {
@@ -240,8 +227,7 @@ const dummy_data = [
     description: "164",
     release: 1994,
     category: "Car",
-    image:
-      "images/Alfa_02_promo-HUB_Giulia_820x560.jpg",
+    image: "images/Alfa_02_promo-HUB_Giulia_820x560.jpg",
     price: 75452,
   },
   {
@@ -260,8 +246,7 @@ const dummy_data = [
     description: "Suburban 2500",
     release: 2007,
     category: "Car",
-    image:
-      "images/suburban-2500-big-block-454-gmt400-1.jpg",
+    image: "images/suburban-2500-big-block-454-gmt400-1.jpg",
     price: 35439,
   },
   {
@@ -270,8 +255,7 @@ const dummy_data = [
     description: "QX",
     release: 2010,
     category: "Car",
-    image:
-      "images/infiniti-qx-monograph-concept-101-64da50e8b3085.jpg",
+    image: "images/infiniti-qx-monograph-concept-101-64da50e8b3085.jpg",
     price: 171882,
   },
   {
@@ -280,8 +264,7 @@ const dummy_data = [
     description: "Colt",
     release: 1994,
     category: "Car",
-    image:
-      "images/bca49bc6448d42fa6c9b28687d96de7a.jpg",
+    image: "images/bca49bc6448d42fa6c9b28687d96de7a.jpg",
     price: 77053,
   },
   {
@@ -290,8 +273,7 @@ const dummy_data = [
     description: "DTS",
     release: 2008,
     category: "Car",
-    image:
-      "images/images (2).jpg",
+    image: "images/images (2).jpg",
     price: 76130,
   },
   {
@@ -300,8 +282,7 @@ const dummy_data = [
     description: "Sable",
     release: 2004,
     category: "Car",
-    image:
-      "images/3rd-Mercury-Sable-sedan.jpg",
+    image: "images/3rd-Mercury-Sable-sedan.jpg",
     price: 15107,
   },
   {
@@ -310,8 +291,7 @@ const dummy_data = [
     description: "Forte",
     release: 2011,
     category: "Car",
-    image:
-      "images/jhpdb4kbic08g00c80.jpg",
+    image: "images/jhpdb4kbic08g00c80.jpg",
     price: 40059,
   },
   {
@@ -330,8 +310,7 @@ const dummy_data = [
     description: "Vyvanse",
     release: 2009,
     category: "Drug",
-    image:
-      "images/AP755231934976.2e16d0ba.fill-735x490.jpg",
+    image: "images/AP755231934976.2e16d0ba.fill-735x490.jpg",
     price: 35876,
   },
   {
@@ -349,8 +328,7 @@ const dummy_data = [
     description: "Nortriptyline Hydrochloride",
     release: 1963,
     category: "Drug",
-    image:
-      "images/product-photo-1330.png",
+    image: "images/product-photo-1330.png",
     price: 28181,
   },
   {
@@ -359,8 +337,7 @@ const dummy_data = [
     description: "OXYGEN",
     release: 2007,
     category: "Drug",
-    image:
-      "images/image.jpg",
+    image: "images/image.jpg",
     price: 120653,
   },
   {
@@ -379,8 +356,7 @@ const dummy_data = [
     description: "SENSAI FLUID FINISH FF203",
     release: 1999,
     category: "Drug",
-    image:
-      "images/4bd46c674ac986260ac4d9af3fc8.jpg",
+    image: "images/4bd46c674ac986260ac4d9af3fc8.jpg",
     price: 182525,
   },
   {
@@ -389,8 +365,7 @@ const dummy_data = [
     description: "Amlodipine Besylate and Benazepril Hydrochloride",
     release: 2005,
     category: "Drug",
-    image:
-      "images/images (3).jpg",
+    image: "images/images (3).jpg",
     price: 80631,
   },
   {
@@ -624,7 +599,9 @@ const dummy_data = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  localStorage.setItem("ads", JSON.stringify(dummy_data));
+  if (!localStorage.getItem("ads")) {
+    localStorage.setItem("ads", JSON.stringify(dummy_data));
+  }
 });
 
 const controller = new AdsController(new AdsModel(), new AdsView());

@@ -18,6 +18,7 @@ class AdsView {
   showSuccessMessage() {
     const successMessage = document.getElementById("success-message");
     successMessage.style.display = "block";
+    ti;
   }
 
   displayAdsForPage(pageNumber) {
@@ -169,17 +170,18 @@ class AdsView {
       adElement.classList.add("ad");
 
       const titleElement = document.createElement("h3");
-      titleElement.textContent = title;
+      titleElement.textContent = title || "No title available";
       titleElement.setAttribute("id", `title-${id}`);
       adElement.appendChild(titleElement);
 
       const descriptionElement = document.createElement("p");
-      descriptionElement.textContent = description;
+      descriptionElement.textContent =
+        description || "No description available";
       descriptionElement.setAttribute("id", `description-${id}`);
       adElement.appendChild(descriptionElement);
 
       const priceElement = document.createElement("p");
-      priceElement.textContent = `Price: ${price}`;
+      priceElement.textContent = `Price: ${price ? price : "N/A"}`;
       priceElement.setAttribute("id", `price-${id}`);
       adElement.appendChild(priceElement);
 
@@ -189,12 +191,12 @@ class AdsView {
       adElement.appendChild(categoryElement);
 
       const releaseElement = document.createElement("p");
-      releaseElement.textContent = `Release: ${release}`;
+      releaseElement.textContent = `Release: ${release ? release : "N/A"}`;
       releaseElement.setAttribute("id", `release-${id}`);
       adElement.appendChild(releaseElement);
 
       const imageElement = document.createElement("img");
-      imageElement.src = image;
+      imageElement.src = image ? image : "https://via.placeholder.com/150";
       imageElement.alt = "Ad Image";
       imageElement.setAttribute("id", `image-${id}`);
       adElement.appendChild(imageElement);

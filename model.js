@@ -17,6 +17,7 @@ class AdsModel {
   }
 
   getPageAds(ads, pageNumber) {
+    this.ads = JSON.parse(localStorage.getItem("ads"));
     const startIndex = (pageNumber - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
     return ads.slice(startIndex, endIndex);
@@ -65,7 +66,9 @@ class AdsModel {
     yearFrom,
     yearTo
   ) {
-    let result = this.ads;
+    let result = localStorage.getItem("ads")
+      ? JSON.parse(localStorage.getItem("ads"))
+      : [];
 
     if (title) {
       result = result.filter((ad) => ad.title.includes(title));
@@ -82,8 +85,8 @@ class AdsModel {
     }
 
     if (yearFrom != 1987 || yearTo != 1987) {
-      result = result.filter(
-        (ad) => ad.release >= yearFrom && ad.release <= yearTo
+      result = result.filter((ad) =>
+        ad.release ? ad.release >= yearFrom && ad.release <= yearTo : ad
       );
     }
 
